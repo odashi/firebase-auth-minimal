@@ -12,4 +12,4 @@ Authentication and/or Google Identity Platform.
    values on your project.
 1. On `frontend/`, run `docker build -t frontend .`
 1. Run `docker run -it --rm -p 8080:8080 frontend`
-1. Open `https://localhost:8080` on your browser and check if the page works.
+1. Open `http://localhost:8080/` on your browser and check if the page works.

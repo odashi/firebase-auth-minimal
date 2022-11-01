@@ -26,9 +26,8 @@ def authorize(
     authorization: HTTPAuthorizationCredentials = Depends(HTTPBearer()),
 ) -> Mapping[str, Any]:
     try:
-        id_token = authorization.credentials
-        decoded_token = google.oauth2.id_token.verify_firebase_token(
-            id_token,
+        token = google.oauth2.id_token.verify_firebase_token(
+            authorization.credentials,
             http_request,
             audience=audience,
         )
@@ -37,7 +36,7 @@ def authorize(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect token",
         )
-    return decoded_token
+    return token
 
 
 @app.get("/")

@@ -3,6 +3,13 @@
 This example contains a minimal example Web application working with Firebase
 Authentication and/or Google Identity Platform.
 
+The app consists of following servers:
+
+- Frontend (`localhost:8080`): Written in bare Javascript, JQuery, and Firebase
+  utilities.
+- Backend (`localhost:8081`): Written in Python/FastAPI, protected by CORS and
+  authentication.
+
 ## Getting Started
 
 ### Prerequisites

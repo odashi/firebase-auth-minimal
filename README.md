@@ -5,10 +5,8 @@ Authentication and/or Google Identity Platform.
 
 The app consists of following servers:
 
-- Frontend (`localhost:8080`): Written in bare Javascript, JQuery, and Firebase
-  utilities.
-- Backend (`localhost:8081`): Written in Python/FastAPI, protected by CORS and
-  authentication.
+- Frontend (`localhost:8080`): written in Javascript/JQuery/Firebase.
+- Backend (`localhost:8081`): written in Python/FastAPI/google-auth.
 
 ## Getting Started
 

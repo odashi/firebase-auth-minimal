@@ -1,0 +1,5 @@
+fastapi
+google-auth
+gunicorn
+requests
+uvicorn[standard]

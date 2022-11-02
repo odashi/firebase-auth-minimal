@@ -18,23 +18,22 @@ app.add_middleware(
     allow_headers=["Authorization"],
 )
 
-http_request = google.auth.transport.requests.Request()
+requester = google.auth.transport.requests.Request()
 
 
 def authorize(
-    request: Request,
     authorization: HTTPAuthorizationCredentials = Depends(HTTPBearer()),
 ) -> Mapping[str, Any]:
     try:
         token = google.oauth2.id_token.verify_firebase_token(
             authorization.credentials,
-            http_request,
+            requester,
             audience=audience,
         )
     except Exception:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect token",
+            detail="Invalid credentials",
         )
     return token
 

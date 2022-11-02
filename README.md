@@ -37,12 +37,12 @@ the steps below.
 1. On `frontend/`, run `docker build -t frontend .`
 1. Run `docker run -it --rm -p 8080:8080 frontend`
 
-### How the app works
+### Check how the app works
 
 1. Open `http://localhost:8080/` on your browser.
 1. You may be requested to log into the service with an E-mail address.
-   If you turned the "Enable create (sign-up)" option on, the sign-in form also works to
-   sign-up a new user.
+   If your Identity Platform enabled the "Enable create (sign-up)" option, the sign-in
+   form also works to sign-up a new user.
 1. After logging into the service, you may see two buttons: "Fetch backend" and "Sign
    out". "Fetch backend" invokes the backend server with the obtained ID token, and
    returns a user-specific data: the name of the user.

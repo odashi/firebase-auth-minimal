@@ -8,6 +8,10 @@ The app consists of following servers:
 - Frontend (`localhost:8080`): written in Javascript/JQuery/Firebase.
 - Backend (`localhost:8081`): written in Python/FastAPI/google-auth.
 
+This example uses HTTP (not HTTPS) for frontend-backend communication for simplicity.
+This is in generall dangerous because the tokens are exchanged without any encryption.
+Do not release the bare HTTP backend in your real production systems if it need to exchange any private information.
+
 ## Getting Started
 
 ### Prerequisites
